@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+    <body>
+        <h1>My Many Talents</h1>
+        <ul id="container">
+            <% skills.forEach(function(s) { %>
+                <li>
+                    <form action="/skills/<%= s.id %>?_method=DELETE" method="POST" class="delete-form">
+                        <button type="submit">X</button>
+                    </form>
+                    <a href="/skills/<%= s.id %>">
+                        <%= s.skill %>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
+        <%- include('../partials/footer') %>
