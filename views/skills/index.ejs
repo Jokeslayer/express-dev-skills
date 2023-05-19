@@ -7,9 +7,12 @@
                 <li>
                     <form action="/skills/<%= s.id %>?_method=DELETE" method="POST" class="delete-form">
                         <button type="submit">X</button>
-                    </form><a href="/skills/<%= s.id %>"><%= s.skill %></a>
+                    </form>
+                    <a class="list" href="/skills/<%= s.id %>">
+                        <%= s.skill %>
+                    </a>
                 </li>
                 <% }); %>
         </ul>
-        <a href="/skills/new">Add To-Do</a>
+        <button><a href="/skills/new">Add more awesome stuff</a></button>
         <%- include('../partials/footer') %>
